@@ -3,11 +3,11 @@ on:
   pull_request:
     branches:
       - develop
-strategy:
-    matrix:
-        go: [1.15, 1.21.0]
 jobs:
   check-application:
+    strategy:
+      matrix:
+        go: [ 1.15, 1.21.0 ]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
