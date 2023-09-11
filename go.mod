@@ -1,3 +1,5 @@
 module mymath
 
-go 1.21.0
+go 1.15
+
+toolchain go1.21.0
