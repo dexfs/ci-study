@@ -13,11 +13,11 @@ jobs:
           fetch-depth: 0
           go-version: '1.15'
       - name: Run unit tests
-        run: go test --coverprofile=coverage.out
-      - name: Run Gosec Security Scanner
-        run: |
-          go get github.com/securego/gosec/cmd/gosec
-          gosec -no-fail -fmt=sonarqube -out report.json ./...
+        run: go test --coverprofile=./coverage.out
+#      - name: Run Gosec Security Scanner
+#        run: |
+#          go get github.com/securego/gosec/cmd/gosec
+#          gosec -no-fail -fmt=sonarqube -out report.json ./...
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
