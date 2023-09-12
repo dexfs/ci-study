@@ -16,7 +16,7 @@ jobs:
       - run: --out-dir ${{ env.COVERAGE_OUTPUT }}go test --coverprofile=coverage/coverage.out
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
-        run: |
+      - run: |
           sonnar-scanner --define sonar.go.tests.reportPaths=${{ env.COVERAGE_OUTPUT }}/coverage.out
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
