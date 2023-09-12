@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-go@v2
         with:
           go-version: '1.15'
-      - run: --out-dir ${{ env.COVERAGE_OUTPUT }}go test --coverprofile=coverage/coverage.out
+      - run: go test --coverprofile=coverage/coverage.out
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
       - run: |
