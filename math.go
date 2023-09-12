@@ -14,7 +14,3 @@ func Soma(a, b int) int {
 func Divisao(a, b int) int {
 	return a / b
 }
-
-func Multiplicar(a, b int) int {
-	return a * b
-}
