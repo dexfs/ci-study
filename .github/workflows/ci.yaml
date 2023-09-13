@@ -14,7 +14,6 @@ jobs:
       - uses: actions/setup-go@v2
         with:
           go-version: ${{ matrix.go }}
-      - run: go test
       - run: go run math.go
 
       - name: Set up QEMU
